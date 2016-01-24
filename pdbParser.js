@@ -56,20 +56,18 @@ var singleCodeLookUp = {
 
 var formattedInput = [];
 for(var i = 0; i < input.length; i++){
-	console.log(input[i]);
 	formattedInput.push(singleCodeLookUp[input[i]]);
 }
 
-console.log(formattedInput.toString().replace(/,/g,''));
 
-fs.appendFile('input.txt',formattedInput, function (err) {
+fs.appendFile('input.txt',formattedInput.toString().replace(/,/g,''), function (err) {
 
 });
 fs.appendFile('output.txt',output, function (err) {
 
 });
 
-
+console.log("Done!")
 
 
 

@@ -61,7 +61,7 @@ class colors:
 
 # Parameters for the model and dataset
 TRAINING_SIZE = 50000
-DIGITS = 20
+DIGITS = 60
 INVERT = True
 # Try replacing GRU, or SimpleRNN
 RNN = recurrent.LSTM
@@ -90,9 +90,8 @@ print (cinput)
 print (coutput)
 chars = 'GALMFWKQESPVICYHRNDT01 '
 ctable = CharacterTable(chars, MAXLEN)
-
-questions = []
-expected = []
+questions = cinput
+expected = coutput
 seen = set()
 print('Generating data...')
 # while len(questions) < TRAINING_SIZE:
